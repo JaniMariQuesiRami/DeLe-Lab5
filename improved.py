@@ -30,7 +30,7 @@ model.summary()
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
 # Entrenar el modelo y guardar la historia del entrenamiento
-history = model.fit(X_train, y_train, epochs=10, batch_size=64, validation_data=(X_test, y_test))
+history = model.fit(X_train, y_train, epochs=3, batch_size=64, validation_data=(X_test, y_test))
 
 # Evaluar el modelo
 loss, accuracy = model.evaluate(X_test, y_test)
