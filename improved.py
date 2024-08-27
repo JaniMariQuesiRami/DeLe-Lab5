@@ -1,4 +1,9 @@
-import numpy as np
+## Universida del Valle de Guatemala
+## Deep Learning
+## Laboratorio #5
+## 26/08/2024
+## Modelo LSTM mejorado
+
 from tensorflow.keras.datasets import imdb
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.models import Sequential
@@ -37,8 +42,8 @@ cm = confusion_matrix(y_test, (predictions > 0.5).astype(int))
 cm_display = ConfusionMatrixDisplay(cm)
 cm_display.plot()
 plt.title('Confusion Matrix')
-plt.savefig('confusion_matrix.png')  # Guardar la imagen de la matriz de confusión
-plt.close()  # Cerrar la gráfica para evitar superposiciones
+plt.savefig('confusion_matrix.png') 
+plt.close()  
 
 # Graficar y guardar la pérdida a lo largo del tiempo
 plt.plot(history.history['loss'], label='Training Loss')
@@ -47,5 +52,5 @@ plt.title('Model Loss Over Time')
 plt.xlabel('Epochs')
 plt.ylabel('Loss')
 plt.legend()
-plt.savefig('loss_over_time.png')  # Guardar la gráfica de la pérdida
-plt.close()  # Cerrar la gráfica para evitar superposiciones
+plt.savefig('loss_over_time.png')
+plt.close()
